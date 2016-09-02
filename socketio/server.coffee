@@ -31,7 +31,6 @@ onNotice=(socket)->
   socket.on 'notice', (data)-> clientlog(socket, "socket.on('notice')", "data.type="+data.type)
 
 
-
 #  UTILITY ============================================================
 serverlog = (args) ->
   date = new Date()

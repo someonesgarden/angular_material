@@ -1,27 +1,17 @@
 extends layout
 
+block header_more
+
 block content
-    div.container
-        //TITLE LOGO
-        div.row
-            div.col.col-md-12.text-center
 
-        div.row.well
-            div.col.col-md-12
-                h1.text-center: strong BIG TITLE
-            div.col.col-md-4
+        md-toolbar(class="{{lc.screenSize}}")
+            h1 {{lc.title}}
 
-                h2.text-center: span.text-center.glyphicons.glyphicons-temple-hindu
-                h2.text-center ART FLAT
-                p blablaladsfasdfasdf
-            div.col.col-md-4
-                h2.text-center: span.text-center.glyphicons.glyphicons-snowflake
-                h2.text-center AFECT
-                p blablaladsblabla ladsfasdfasdfbla blaladsfasdfasdf
+        md-content#content(flex)
+            h2  {{lc.sectionTitle}}
+            p {{lc.sectionBody}}
 
-            div.col.col-md-4
-                h2.text-center: span.text-center.glyphicons.glyphicons-flower
-                h2.text-center AND YOU
-                p blablaladsfasdb lablaladb lablaladsfasdfasdf
+        md-toolbar
+            h1 Footer row
 
 block bottom_more

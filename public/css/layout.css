@@ -1,5 +1,4 @@
 body {
-    padding: 40px 12px 0px 12px;
     font-family:‘ヒラギノ角ゴ ProN W3′, ‘Hiragino Kaku Gothic ProN’, ‘メイリオ’, ‘Meiryo’, ‘ＭＳ Ｐゴシック’, ‘MS PGothic’, sans-serif;
     /*
     font-family: 'Lato', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
@@ -17,7 +16,6 @@ body {
 a {
     color: #00B7FF;
 }
-
 
 .ng-enter,
 .ng-leave,
@@ -48,4 +46,25 @@ a {
 
 .ng-move.ng-move-active {
     opacity: 1;
+}
+
+/* Angular Materials */
+
+md-toolbar h1 {
+    margin: auto;
+    font-weight: 400;
+}
+
+md-toolbar.small h1 {
+    font-size: 1.25em;
+    margin: auto 0;
+    padding-left: 16px;
+}
+
+#content {
+    padding: 8px 40px;
+}
+
+#content.small {
+    padding: 8px 16px;
 }

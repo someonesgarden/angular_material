@@ -28,6 +28,7 @@ RUN bower install angular angular-material \
 angular-messages angular-route \
 angular-resource angular-sanitize \
 angular-local-storage --save
+RUN bower install d3 --save
 
 COPY . /usr/src/app
 WORKDIR /usr/src/app

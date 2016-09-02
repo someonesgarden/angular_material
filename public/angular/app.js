@@ -6,7 +6,7 @@ var services    = angular.module('MainApp.services', []);
 
 angular.element(document).ready(
     function(){
-        MainApp=angular.module('MainApp', [ 'MainApp.directives', 'MainApp.ctrls', 'MainApp.services']);
+        MainApp=angular.module('MainApp', ['ngMaterial', 'MainApp.directives', 'MainApp.ctrls', 'MainApp.services']);
         MainApp.config(['$httpProvider',
             function($httpProvider) {
                 $httpProvider.defaults.timeout = 5000;
@@ -15,3 +15,4 @@ angular.element(document).ready(
         angular.bootstrap(document, ['MainApp']);
     }
 );
+
