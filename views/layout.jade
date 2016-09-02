@@ -1,40 +1,55 @@
 doctype html
-//html(ng-app="ThreeViewer", ng-strict-di)
-html
+html(lang="ja", xmlns:ng="http://angularjs.org", id="ng-app", ng-strict-di)
     head
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0")
 
-        title= title
-
-        //script.
-            var login_username = "#{username}";
-
+        //CSS
         link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
         link(rel='stylesheet', href='/bower_components/glyphicons/styles/glyphicons.css')
         link(rel='stylesheet', href='/bower_components/glyphicons-halflings/css/glyphicons-halflings.css')
+        link(rel='stylesheet', href='/bower_components/angular-material/angular-material.min.css')
         link(rel='stylesheet', href='/css/layout.css')
 
-        //script(type="text/javascript",, src="/lib/function.js")
+        script.
+         var MainApp = {};
+
+        //script(type="text/coffeescript", src="/lib/func.coffee")
+        //JQUERY + BOOTSTRAP + UNDERSCORE + COFFEESCRIPT + LATEX
         script(type="text/javascript", src="/bower_components/jquery/dist/jquery.min.js")
         script(type="text/javascript", src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
         script(type="text/javascript", src="/bower_components/underscore/underscore-min.js")
         script(type="text/javascript", src="/lib/coffee/coffee-script.js")
+        script(type="text/javascript", src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML")
+
+        //SOCKET.IO
         script(type="text/javascript", src="/socket.io/socket.io.js")
-
         script(type="text/coffeescript", src="/socketio/client.coffee")
-        //script(type="text/coffeescript", src="/lib/func.coffee")
 
+        //ANGULAR.JS
+        script(type="text/javascript", src="/bower_components/angular/angular.min.js")
+        script(type="text/javascript", src="/bower_components/angular-material/angular-material.min.js")
+        script(type="text/javascript", src="/bower_components/angular-route/angular-route.min.js")
+        script(type="text/javascript", src="/bower_components/angular-resource/angular-resource.min.js")
+        script(type="text/javascript", src="/bower_components/angular-sanitize/angular-sanitize.min.js")
+        script(type="text/javascript", src="/bower_components/angular-local-storage/dist/angular-local-storage.min.js")
+
+        //ANGULAR SRC
+        script(type="text/javascript", src="/angular/app.js")
+        script(type="text/javascript", src="/angular/services.js")
+        script(type="text/javascript", src="/angular/directives.js")
+        script(type="text/javascript", src="/angular/controllers.js")
+
+        title= title
         block header_more
 
-    body
+    body(ng-controller="bodyController", layout="column")
         //include navbar
 
         block content
 
         //include modals
-
         block bottom_more
 
 
